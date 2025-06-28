@@ -120,7 +120,7 @@ export interface Subscription {
 }
 
 // Wallet Types
-export interface Wallet {
+export type Wallet = {
   id: number;
   userId: number;
   currencyId: number;
@@ -131,7 +131,7 @@ export interface Wallet {
   createdAt?: string;
   updatedAt?: string;
   currency?: Currency;
-}
+};
 
 export interface Transaction {
   id: number;

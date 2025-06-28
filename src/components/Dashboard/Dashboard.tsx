@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import { walletService } from '../../services/wallets';
 import { taskService } from '../../services/tasks';
-import { Wallet, Task } from '../../types';
+import type { Wallet, Task } from '../../types';
 import { DollarSign, TrendingUp, CheckSquare, Star, ArrowRight, Zap, Gift, Target } from 'lucide-react';
 
 const Dashboard: React.FC = () => {

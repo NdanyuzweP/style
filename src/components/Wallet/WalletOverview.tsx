@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { walletService } from '../../services/wallets';
-import { Wallet, Transaction } from '../../types';
+import type { Wallet, Transaction } from '../../types';
 import { Eye, EyeOff, ArrowUpRight, ArrowDownLeft } from 'lucide-react';
 
 const WalletOverview: React.FC = () => {

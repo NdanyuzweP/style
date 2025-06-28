@@ -1,5 +1,5 @@
 import api from './api';
-import { Wallet, Transaction } from '../types';
+import type { Wallet, Transaction } from '../types';
 
 export const walletService = {
   async getWallets(): Promise<{ wallets: Wallet[] }> {

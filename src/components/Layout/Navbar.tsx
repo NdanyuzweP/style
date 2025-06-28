@@ -19,24 +19,26 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 glass-card border-t border-white/20 px-4 py-2 z-40">
-      <div className="flex justify-around items-center max-w-md mx-auto">
-        {navItems.map(({ to, icon: Icon, label }) => (
-          <NavLink
-            key={to}
-            to={to}
-            className={({ isActive }) =>
-              `flex flex-col items-center p-3 rounded-xl transition-all duration-300 ${
-                isActive
-                  ? 'text-white bg-gradient-to-r from-indigo-500 to-purple-600 shadow-lg transform scale-105'
-                  : 'text-slate-600 hover:text-indigo-600 hover:bg-white/50'
-              }`
-            }
-          >
-            <Icon size={20} />
-            <span className="text-xs mt-1 font-medium">{label}</span>
-          </NavLink>
-        ))}
+    <nav className="fixed bottom-0 left-0 right-0 glass-nav z-40 safe-area-bottom">
+      <div className="mobile-container max-w-md mx-auto">
+        <div className="flex justify-around items-center py-2 px-1">
+          {navItems.map(({ to, icon: Icon, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              className={({ isActive }) =>
+                `flex flex-col items-center p-3 rounded-2xl transition-all duration-300 touch-target ripple ${
+                  isActive
+                    ? 'nav-active text-white transform scale-105'
+                    : 'text-slate-600 hover:text-indigo-600 hover:bg-white/30'
+                }`
+              }
+            >
+              <Icon size={20} className="mb-1" />
+              <span className="text-xs font-medium">{label}</span>
+            </NavLink>
+          ))}
+        </div>
       </div>
     </nav>
   );

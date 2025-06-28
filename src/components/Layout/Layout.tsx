@@ -8,10 +8,10 @@ const Layout: React.FC = () => {
   const { user } = useAuth();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 safe-area-top">
       <Header />
-      <main className={`${user?.role !== 'admin' ? 'pb-20' : ''} pt-6`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className={`${user?.role !== 'admin' ? 'pb-24' : 'pb-6'} pt-4`}>
+        <div className="mobile-container max-w-md mx-auto">
           <Outlet />
         </div>
       </main>

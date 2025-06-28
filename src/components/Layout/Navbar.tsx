@@ -19,22 +19,22 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-2">
+    <nav className="fixed bottom-0 left-0 right-0 glass-card border-t border-white/20 px-4 py-2 z-40">
       <div className="flex justify-around items-center max-w-md mx-auto">
         {navItems.map(({ to, icon: Icon, label }) => (
           <NavLink
             key={to}
             to={to}
             className={({ isActive }) =>
-              `flex flex-col items-center p-2 rounded-lg transition-colors ${
+              `flex flex-col items-center p-3 rounded-xl transition-all duration-300 ${
                 isActive
-                  ? 'text-blue-600 bg-blue-50'
-                  : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
+                  ? 'text-white bg-gradient-to-r from-indigo-500 to-purple-600 shadow-lg transform scale-105'
+                  : 'text-slate-600 hover:text-indigo-600 hover:bg-white/50'
               }`
             }
           >
             <Icon size={20} />
-            <span className="text-xs mt-1">{label}</span>
+            <span className="text-xs mt-1 font-medium">{label}</span>
           </NavLink>
         ))}
       </div>

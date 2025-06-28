@@ -281,3 +281,28 @@ export interface PaginatedResponse<T> {
   limit: number;
   totalPages: number;
 }
+
+// Explicit exports to ensure all interfaces are properly recognized by the module system
+export {
+  User,
+  LoginRequest,
+  RegisterRequest,
+  AuthResponse,
+  Currency,
+  Order,
+  CreateOrderRequest,
+  Task,
+  UserTask,
+  Subscription,
+  Wallet,
+  Transaction,
+  KYC,
+  KYCSubmissionRequest,
+  PaymentMethod,
+  Message,
+  SendMessageRequest,
+  Dispute,
+  TradingPair,
+  ApiResponse,
+  PaginatedResponse
+};
